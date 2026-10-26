@@ -57,9 +57,9 @@ button:focus-visible, input:focus-visible { outline: 3px solid #b7623c; outline-
 .object-hints { position: absolute; bottom: 27px; left: 29px; display: flex; gap: 8px; pointer-events: none; }
 .object-hints span { display: flex; align-items: center; gap: 6px; padding: 8px 11px; border: 1px solid #fff9; border-radius: 12px; color: #675346; background: #fffaf0dd; box-shadow: 0 4px 12px #4233260c; font-size: 11px; font-weight: 700; }
 .object-hints i { color: #d0784b; font-style: normal; }
-.game-panel { position: absolute; top: 99px; right: 22px; bottom: 20px; display: flex; flex-direction: column; width: 362px; max-height: calc(100% - 119px); overflow: hidden; border: 1px solid #eddfcd; border-radius: 22px; background: var(--paper); box-shadow: var(--shadow); pointer-events: auto; }
-.panel-tabs { display: grid; flex: 0 0 auto; grid-template-columns: repeat(6, 1fr); gap: 2px; padding: 9px 10px 0; border-bottom: 1px solid var(--line); background: #fffaf2; }
-.tab { padding: 12px 2px 11px; border: 0; border-bottom: 2px solid transparent; color: #95877b; background: transparent; font-size: 11px; font-weight: 700; cursor: pointer; }
+.game-panel { position: absolute; top: 99px; right: 22px; bottom: 20px; display: flex; flex-direction: column; width: 366px; max-height: calc(100% - 119px); overflow: hidden; border: 1px solid #eddfcd; border-radius: 22px; background: var(--paper); box-shadow: var(--shadow); pointer-events: auto; }
+.panel-tabs { display: grid; flex: 0 0 auto; grid-template-columns: repeat(7, 1fr); gap: 1px; padding: 9px 6px 0; border-bottom: 1px solid var(--line); background: #fffaf2; }
+.tab { padding: 11px 1px 10px; border: 0; border-bottom: 2px solid transparent; color: #95877b; background: transparent; font-size: 10px; font-weight: 700; cursor: pointer; text-align: center; }
 .tab.active { border-bottom-color: var(--orange); color: #b65f39; }
 .panel-scroll { flex: 1 1 auto; overflow: auto; padding: 20px 21px 24px; scrollbar-width: thin; scrollbar-color: #ddcaba transparent; }
 .panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
@@ -80,6 +80,37 @@ input[type=range] { display: block; width: 100%; height: 6px; border-radius: 5px
 .cost-preview { display: grid; gap: 7px; margin: 17px 0 14px; padding: 12px 13px; border: 1px solid #f0e5d7; border-radius: 13px; background: #fff9f0; }
 .cost-preview span { display: flex; justify-content: space-between; color: #84776a; font-size: 11px; }
 .cost-preview b { color: #57463a; }
+.cost-preview span.total-row { padding-top: 6px; border-top: 1px dashed #e6d8c8; color: #554438; font-weight: 700; }
+.cost-preview span.total-row b { color: #bb623b; font-size: 13px; }
+
+.active-recipe-card { margin: 12px 0 14px; padding: 12px 14px; border: 1px solid #eddcc6; border-radius: 15px; background: #fffcf6; box-shadow: 0 4px 14px #42301f0a; }
+.active-recipe-header { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+.active-recipe-header > div { flex: 1; min-width: 0; }
+.active-recipe-title { color: #5c4535; font-size: 11px; }
+.active-recipe-title b { color: #be683f; font-family: Fredoka, sans-serif; font-size: 14px; }
+.active-recipe-header small { color: #928477; font-size: 9px; }
+.recipe-perks { display: flex; justify-content: space-between; gap: 4px; padding-top: 7px; border-top: 1px solid #f2ebe2; color: #8e7e72; font-size: 9px; }
+.recipe-perks b { color: #524134; }
+.recipe-stats-row { margin-top: 3px; color: #9c8e82; font-size: 9px; }
+.recipe-stats-row span { color: #6e5e51; font-weight: 600; }
+.active-pill { margin-left: 5px; padding: 2px 5px; border-radius: 6px; color: #fff; background: #5a886a; font-size: 8px; font-style: normal; font-weight: 800; }
+
+.achievement-card { display: flex; align-items: center; gap: 11px; margin-bottom: 9px; padding: 11px 13px; border: 1px solid #ede3d4; border-radius: 14px; background: #fffcf8; }
+.achievement-card.unlocked { border-color: #d6e8d6; background: #f8fbf6; }
+.ach-icon { display: grid; flex: 0 0 38px; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: #ad704c; background: #f8ead8; font-size: 17px; }
+.achievement-card.unlocked .ach-icon { color: #43885b; background: #e5f2e5; }
+.ach-info { display: grid; flex: 1; min-width: 0; gap: 2px; }
+.ach-info b { color: #57473a; font-size: 11px; }
+.ach-info span { color: #928477; font-size: 9px; line-height: 1.35; }
+.ach-reward { color: #5e8c6b; font-size: 9px; font-weight: 700; }
+.ach-badge { padding: 4px 7px; border-radius: 8px; color: #3d7850; background: #e3efe3; font-size: 8px; font-weight: 800; white-space: nowrap; }
+.ach-locked { padding: 4px 7px; border-radius: 8px; color: #a4978b; background: #f0ebe4; font-size: 8px; font-weight: 800; white-space: nowrap; }
+
+.rank-badge-box { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 16px 0 18px; padding: 14px 18px; border: 1px solid #ecd8bd; border-radius: 18px; background: linear-gradient(135deg, #fff7ea, #fff1dc); }
+.rank-letter { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; color: #fff; background: linear-gradient(135deg, #e58c54, #cf6f3b); box-shadow: 0 6px 16px #cf6f3b40; font-family: Fredoka, sans-serif; font-size: 28px; font-weight: 700; }
+.rank-title { color: #584131; font-family: Fredoka, sans-serif; font-size: 19px; font-weight: 600; text-align: left; }
+.rank-stars { color: #e5a034; font-size: 13px; letter-spacing: 2px; text-align: left; }
+.results-actions { display: grid; gap: 8px; margin-top: 14px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 43px; padding: 10px 15px; border: 1px solid transparent; border-radius: 12px; font-size: 12px; font-weight: 800; cursor: pointer; transition: transform .16s ease, background .16s ease, box-shadow .16s ease; }
 .button:hover:not(:disabled) { transform: translateY(-1px); }
 .button.primary { color: #fffaf5; background: linear-gradient(135deg, #e58c58, #d6794c); box-shadow: 0 7px 16px #d8794b3a; }
@@ -287,7 +318,7 @@ input[type=range] { display: block; width: 100%; height: 6px; border-radius: 5px
   .panel-note { margin-bottom: 12px; }
   .field-label { margin-top: 12px; }
   .cost-preview { margin: 12px 0; padding: 10px 12px; }
-  .bottom-nav { position: absolute; z-index: 4; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(4,1fr); height: 60px; padding-bottom: env(safe-area-inset-bottom); border-top: 1px solid #ebdfd0; background: #fffaf2; pointer-events: auto; }
+  .bottom-nav { position: absolute; z-index: 4; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(5,1fr); height: 60px; padding-bottom: env(safe-area-inset-bottom); border-top: 1px solid #ebdfd0; background: #fffaf2; pointer-events: auto; }
   .bottom-nav button { display: grid; place-items: center; align-content: center; gap: 2px; border: 0; color: #958577; background: transparent; font-size: 9px; font-weight: 700; cursor: pointer; }
   .bottom-nav button span { font-size: 17px; }
   .bottom-nav button.active { color: #c87148; }
